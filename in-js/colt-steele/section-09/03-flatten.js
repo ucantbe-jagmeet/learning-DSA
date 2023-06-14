@@ -10,7 +10,6 @@ function flatten(oldArr){
   for(var i = 0; i < oldArr.length; i++){
     
     if(Array.isArray(oldArr[i])){
-      console.log(oldArr[i]);
        		newArr = newArr.concat(flatten(oldArr[i]))
     	} else {
       		newArr.push(oldArr[i])
