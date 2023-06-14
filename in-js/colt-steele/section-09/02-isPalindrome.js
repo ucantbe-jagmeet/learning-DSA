@@ -14,4 +14,4 @@ function isPalindrome(str){
     return false;
 }
 
-console.log(isPalindrome("cc"));
+console.log(isPalindrome("amanaplanacanalpanama"));
