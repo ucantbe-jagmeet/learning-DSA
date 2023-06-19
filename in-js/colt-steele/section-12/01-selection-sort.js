@@ -10,12 +10,15 @@ function selectionSort(arr){
                 min = j
                 }
             }
-            // swap
-             let temp = arr[i]
-             arr[i] = arr[min]
-             arr[min]= temp
 
-   }
+            if( i !== min){
+                // swap
+                let temp = arr[i]
+                arr[i] = arr[min]
+                arr[min]= temp
+            }
+
+        }
     return arr
 }
 
