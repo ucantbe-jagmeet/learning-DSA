@@ -10,7 +10,6 @@ function insertionSort(arr){
         
         arr[j+1] = curr
     }
-
     return arr
 }
 
