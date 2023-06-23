@@ -1,14 +1,12 @@
-function swap( arr, i, j){
-    let temp = arr[i]
-    arr[i] == arr[j]
-    arr[j] = temp
-}
+const swap = (arr, idx1, idx2) => {
+    [arr[idx1], arr[idx2]] = [arr[idx2], arr[idx1]];
+  };
 
-function pivot( arr, start =0 , end = arr.length + 1){
+function pivot( arr, start =0 , end = arr.length -1){
     let pivot = arr[start]
     var swapIndex = start
 
-   for( let i = start + 1 ; i < arr.length; i++){
+   for( let i = start + 1 ; i <= end; i++){
 
         if( pivot > arr[i]){
             swapIndex ++
