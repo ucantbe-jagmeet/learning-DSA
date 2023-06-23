@@ -6,11 +6,11 @@ function swap( arr, i, j){
     arr[j] = temp
 }
 
-function pivot( arr, start =0 , end = arr.length +1){
+function pivot( arr, start =0 , end = arr.length -1){
     let pivot = arr[start]
     var swapIndex = start
 
-   for( let i = start + 1 ; i < arr.length; i++){
+   for( let i = start + 1 ; i <= end; i++){
 
         if( pivot > arr[i]){
             swapIndex ++
