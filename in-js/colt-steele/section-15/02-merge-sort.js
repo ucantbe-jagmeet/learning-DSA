@@ -34,4 +34,4 @@ function mergeSort(arr){
     return sort( left, right)
 }
 
-console.log(mergeSort([1,  10, 50, 14, 122, 99, 100, 2, 130 ]));
+console.log(mergeSort([1, 10, 50, 14, 122, 99, 100, 2, 130 ]));
