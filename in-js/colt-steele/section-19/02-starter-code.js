@@ -35,10 +35,28 @@ class SinglyLinkedList {
       current = current.next;
     }
   }
+
+  pop() {
+    if (!this.head) return undefined;
+
+    let current = this.head;
+    let newTail = current;
+    while (current.next) {
+      newTail = current;
+      current = current.next;
+    }
+
+    this.tail = newTail;
+    this.tail.next = null;
+    this.length--;
+    return current;
+  }
 }
 
 var list = new SinglyLinkedList();
 list.push("Hello");
 list.push("There");
 list.push("Ammy");
-list.traverse();
+list.pop();
+list.pop();
+console.log(list);
