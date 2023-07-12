@@ -27,16 +27,18 @@ class SinglyLinkedList {
     this.length++;
     return this;
   }
+
+  traverse() {
+    var current = this.head;
+    while (current) {
+      console.log(current.val);
+      current = current.next;
+    }
+  }
 }
 
 var list = new SinglyLinkedList();
 list.push("Hello");
 list.push("There");
-console.log(list);
-
-// var first = new Node("Hi");
-// first.next = new Node("There");
-// first.next.next = new Node("how");
-// first.next.next.next = new Node("are");
-// first.next.next.next.next = new Node("you");
-// console.log(first.next.next);
+list.push("Ammy");
+list.traverse();
