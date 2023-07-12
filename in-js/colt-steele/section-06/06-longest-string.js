@@ -1,28 +1,21 @@
-// Write a function called findLongestSubstring, which accepts a string and returns the length of the longest substring with all distinct characters.
+function findTriplets(arr) {
+  const triplets = [];
+  const len = arr.length;
 
-/*
-    findLongestSubstring('') // 0
-	findLongestSubstring('rithmschool') // 7
-	findLongestSubstring('thisisawesome') // 6
-	findLongestSubstring('thecatinthehat') // 7
-	findLongestSubstring('bbbbbb') // 1
-	findLongestSubstring('longestsubstring') // 8
-	findLongestSubstring('thisishowwedoit') // 6
-*/
-
-function findLongestSubstring(str) {
-	let longest = 0;
-	let seen = {};
-	let start = 0;
-   
-	for (let i = 0; i < str.length; i++) {
-	  let char = str[i];
-	  if (seen[char]) {
-		start = Math.max(start, seen[char]);
-	  }
-	  longest = Math.max(longest, i - start + 1);
-	  seen[char] = i + 1;
-	}
-	return longest;
+  for (let i = 0; i < len - 2; i++) {
+    for (let j = i + 1; j < len - 1; j++) {
+      for (let k = j + 1; k < len; k++) {
+        if (arr[i] + arr[j] + arr[k] === 0) {
+          triplets.push([arr[i], arr[j], arr[k]]);
+        }
+      }
+    }
   }
-console.log(findLongestSubstring("longestsubstring"));
+
+  return triplets;
+}
+
+// Example usage:
+const array = [1, -2, 3, 0, -1, 2, -3, 4, -4];
+const triplets = findTriplets(array);
+console.log(triplets);

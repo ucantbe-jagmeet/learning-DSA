@@ -17,4 +17,4 @@ function binarySearch( arr, num){
     return -1
 }
 
-console.log(binarySearch([ 2, 5, 6, 9, 13, 15, 28, 30], 13 ));
+console.log(binarySearch([ 2, 5, 6, 9, 13, 15, 28, 30], 1 ));
