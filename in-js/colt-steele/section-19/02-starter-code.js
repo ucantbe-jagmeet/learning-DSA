@@ -14,7 +14,6 @@ class SinglyLinkedList {
     this.tail = null;
     this.length = 0;
   }
-
   push(val) {
     var newNode = new Node(val);
     if (!this.head) {
@@ -27,36 +26,33 @@ class SinglyLinkedList {
     this.length++;
     return this;
   }
-
-  traverse() {
-    var current = this.head;
-    while (current) {
-      console.log(current.val);
-      current = current.next;
-    }
-  }
-
   pop() {
     if (!this.head) return undefined;
+    var current = this.head;
+    var newTail = current;
 
-    let current = this.head;
-    let newTail = current;
     while (current.next) {
       newTail = current;
       current = current.next;
     }
-
     this.tail = newTail;
     this.tail.next = null;
     this.length--;
     return current;
   }
+
+  shift() {
+    if (!this.head) return undefined;
+    var currentHead = this.head;
+    this.head = currentHead.next;
+    this.length--;
+    return currentHead;
+  }
 }
 
 var list = new SinglyLinkedList();
-list.push("Hello");
-list.push("There");
-list.push("Ammy");
-list.pop();
-list.pop();
+list.push("hello");
+list.push("World");
+list.push("!");
+list.shift();
 console.log(list);
