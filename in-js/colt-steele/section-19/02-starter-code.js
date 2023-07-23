@@ -48,11 +48,24 @@ class SinglyLinkedList {
     this.length--;
     return currentHead;
   }
+
+  unshift(val) {
+    var newNode = new Node(val);
+    if (!this.head) {
+      this.head = newNode;
+      this.tail = this.head;
+    } else {
+      newNode.next = this.head;
+      this.head = newNode;
+    }
+    this.length++;
+    return this.head;
+  }
 }
 
 var list = new SinglyLinkedList();
 list.push("hello");
 list.push("World");
 list.push("!");
-list.shift();
+list.unshift("oops");
 console.log(list);
