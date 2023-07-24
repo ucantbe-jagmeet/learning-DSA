@@ -71,6 +71,16 @@ class SinglyLinkedList {
     }
     return current;
   }
+  set(index, val) {
+    if (index < 0 || index >= this.length) return null;
+    var counter = 0;
+    var current = this.head;
+    while (counter !== index) {
+      current = current.next;
+      counter++;
+    }
+    return (current.val = val);
+  }
 }
 
 var list = new SinglyLinkedList();
@@ -78,4 +88,5 @@ list.push("hello");
 list.push("World");
 list.push("!");
 list.unshift("oops");
-console.log(list.get(0));
+console.log(list.set(0, "omg"));
+console.log(list.get(1));
