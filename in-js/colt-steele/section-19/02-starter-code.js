@@ -72,14 +72,12 @@ class SinglyLinkedList {
     return current;
   }
   set(index, val) {
-    if (index < 0 || index >= this.length) return null;
-    var counter = 0;
-    var current = this.head;
-    while (counter !== index) {
-      current = current.next;
-      counter++;
+    var foundNode = this.get(index);
+    if (foundNode) {
+      foundNode.val = val;
+      return true;
     }
-    return (current.val = val);
+    return false;
   }
 }
 
