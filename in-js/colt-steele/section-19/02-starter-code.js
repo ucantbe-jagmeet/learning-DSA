@@ -103,7 +103,31 @@ class SinglyLinkedList {
     var removed = prev.next;
     prev.next = removed.next;
     this.length--;
-    return;
+    return removed;
+  }
+  reverse() {
+    //swapping the head and tail
+    var node = this.head;
+    this.head = this.tail;
+    this.tail = node;
+    var next;
+    var prev = null;
+    for (var i = 0; i < this.length; i++) {
+      next = node.next;
+      node.next = prev;
+      prev = node;
+      node = next;
+    }
+    return this;
+  }
+  print() {
+    var arr = [];
+    var current = this.head;
+    while (current) {
+      arr.push(current.val);
+      current = current.next;
+    }
+    console.log(arr);
   }
 }
 
@@ -112,6 +136,9 @@ list.push("oops");
 list.push("hello");
 list.push("World");
 list.push("!");
+list.print();
+list.remove(2);
 
-console.log(list.insert(0, "First"));
-console.log(list);
+list.print();
+list.reverse();
+list.print();
