@@ -1,9 +1,10 @@
-function pattern3(n) {
+function pattern4(n) {
   const result = [];
+  let index = 1;
   for (let i = 1; i <= n; i++) {
     const row = [];
     for (let j = 1; j <= i; j++) {
-      row.push("*");
+      row.push(index++);
     }
     result.push(row);
   }
@@ -13,4 +14,4 @@ function pattern3(n) {
   });
 }
 
-pattern3(4);
+pattern4(4);
