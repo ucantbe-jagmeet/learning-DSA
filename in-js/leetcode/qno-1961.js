@@ -1,13 +1,14 @@
 function temp(s, words) {
-  let str = "";
-
-  for (let i = 0; i < words.length; i++) {
-    str += words[i];
-    if (str === s) {
-      return true;
-    }
-  }
-  return false;
+  return (
+    s ===
+    words.reduce((acc, word) => {
+      if (acc === false || acc.length < s.length) {
+        console.log(acc);
+        return acc + word;
+      }
+      return acc;
+    }, "")
+  );
 }
 
-temp("iloveleetcode", ["i", "love", "leetcode", "apples"]);
+console.log(temp("iloveleetcode", ["i", "love", "leetcode", "apples"]));
