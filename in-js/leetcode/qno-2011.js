@@ -1,16 +1,13 @@
 function temp(operations) {
-  let incrementCount = 0;
-  let decrementCount = 0;
-
+  let x = 0;
   operations.forEach((operation) => {
-    if (operation.endsWith("++")) {
-      incrementCount++;
-    } else if (operation.startsWith("--")) {
-      decrementCount++;
+    if (operation === "++X" || operation === "X++") {
+      x += 1;
+    } else if (operation === "--X" || operation === "X--") {
+      x -= 1;
     }
   });
-  console.log(incrementCount - decrementCount);
-  return incrementCount - decrementCount;
+  return x;
 }
 
 temp(["--X", "X++", "X++"]);
