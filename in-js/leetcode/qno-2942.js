@@ -1,8 +1,7 @@
 function temp(words, x){
-    let arr = []
-   words.filter((word, index)=> word.split('').includes(x) ? arr.push(index): '')
-
-   return arr
+   return words
+        .map((word, index) => word.includes(x) ? index : undefined)
+        .filter(index => index !== undefined);
 }
 
 console.log(temp(["abc","bcd","aaaa","cbc"],'a'));
