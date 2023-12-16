@@ -1,4 +1,4 @@
-var maximumNumberOfStringPairs = function (words) {
+function temp(words) {
     let maxPairs = 0;
     const wordSet = new Set();
 
@@ -17,4 +17,4 @@ var maximumNumberOfStringPairs = function (words) {
     return maxPairs;
 };
 
-console.log(maximumNumberOfStringPairs);
+console.log(temp(["cd", "ac", "dc", "ca", "zz"]));
