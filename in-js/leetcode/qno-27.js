@@ -1,12 +1,18 @@
 function temp(nums, val) {
-    let count = 0
+    if (nums.length === 0) {
+        return []
+    }
 
-    for (let key of nums) {
-        if (key != val) {
-            nums[count++] = key
+    let uniqueIndex = 0
+
+    for (let i = 0; i < nums.length; i++) {
+        if (nums[i] !== val) {
+            nums[uniqueIndex] = nums[i];
+            uniqueIndex++;
         }
     }
-    return nums
+    let result = nums.length = uniqueIndex
+    return result
 }
 
 console.log(temp([3, 2, 2, 3], 2));
