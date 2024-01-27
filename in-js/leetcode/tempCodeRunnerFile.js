@@ -1,1 +1,0 @@
-BigInt(digits.join('')) + BigInt(1)
