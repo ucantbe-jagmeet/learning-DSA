@@ -1,7 +1,6 @@
 function temp(s) {
     let strArr = s.split("");
     let num = 0;
-
     for (let i = 0; i < strArr.length; i++) {
         switch (strArr[i]) {
             case 'I':
