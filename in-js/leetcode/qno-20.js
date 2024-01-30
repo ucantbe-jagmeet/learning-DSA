@@ -5,7 +5,6 @@ function temp(s) {
         '[': ']',
         '{': '}'
     }
-
     for (let x of s) {
         if (x in obj) {
             arr.push(x)
