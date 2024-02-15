@@ -2,6 +2,7 @@ use std::collections::HashMap;
 
 fn two_sum(nums: Vec<i32>, target: i32) -> Vec<i32> {
     let mut hm = HashMap::new();
+    println!("hm are: {:?}", hm);
     for (i, &num) in nums.iter().enumerate() {
         if let Some(&j) = hm.get(&num) {
             // If the complement exists, return the indices
