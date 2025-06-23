@@ -7,7 +7,7 @@ function sum(num) {
     // for (let i = 1; i <= num ;i++){
     //     sum += i
     // } 
-    // return sum
+    // return sums
 
     // step 2
     return (num * (num + 1)) / 2
